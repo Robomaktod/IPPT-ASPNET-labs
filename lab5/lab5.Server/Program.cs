@@ -1,11 +1,12 @@
-using Lab.Api.Services;
+using lab5.Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddScoped<ILabCalculator, LabCalculator>();
+// DI
+builder.Services.AddScoped<IPhoneBookStorage, FilePhoneBookStorage>();
+builder.Services.AddScoped<IPhoneBookService, PhoneBookService>();
 
 builder.Services.AddCors(options =>
 {
@@ -21,6 +22,9 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseCors();
+
+// app.UseHttpsRedirection();
+
 app.MapControllers();
 
 app.Run();
