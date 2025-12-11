@@ -14,7 +14,7 @@ type LabOperationsResult = {
   columnsEqual: boolean;
 };
 
-const API_BASE = 'http://localhost:5268/api/lab2'; // змінй порт під свій
+const API_BASE = 'http://localhost:5268/api/lab2';
 
 function App() {
   const [size, setSize] = useState<number>(3);
