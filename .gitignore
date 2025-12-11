@@ -1,0 +1,17 @@
+# .NET build artifacts
+bin/
+obj/
+.vs/
+.vscode/
+
+# SPA / React
+**/node_modules/
+**/build/
+**/dist/
+
+# User-specific
+*.user
+*.suo
+
+# Logs / temp
+*.log
