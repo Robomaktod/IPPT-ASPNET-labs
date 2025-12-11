@@ -11,7 +11,6 @@ type GeometricProgressionResult = {
   indexK: number;
 };
 
-// Заміни порт під свій (дивись dotnet run)
 const API_BASE = 'http://localhost:5261/api/lab3';
 
 function App() {
